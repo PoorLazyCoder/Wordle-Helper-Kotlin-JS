@@ -1,4 +1,4 @@
-# Wordle-Helper-Kotlin-JS
+# Wordle Helper (Kotlin/JS)
 Help Solve Wordle problem
 
 # How to run
