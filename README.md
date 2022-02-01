@@ -1,6 +1,9 @@
 # Wordle-Helper-Kotlin-JS
 Help Solve Wordle problem
 
+# How to run
+Open wordle-solver.html in a brsower, no server or installation needed.
+
 ##
 
 Example : Yellow letters are OS, Green letters are OSE, Grey letter are WRDCL, Then you filter out one word only
