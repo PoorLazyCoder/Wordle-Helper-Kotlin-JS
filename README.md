@@ -1,6 +1,6 @@
 # Wordle Helper (Kotlin/JS)
-Help Solve Wordle problem
-
+Looking for a hint on how to solve today’s Wordle puzzle? Use Wordle Help tool to find the answer and ensure your success
+ 
 # How to run
 Open release/wordle-solver.html in any browser, no server or installation needed.
 
