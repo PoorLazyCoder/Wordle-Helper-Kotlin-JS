@@ -2,7 +2,7 @@
 Help Solve Wordle problem
 
 # How to run
-Open wordle-solver.html in a brsower, no server or installation needed.
+Open wordle-solver.html in any browser, no server or installation needed.
 
 ##
 
