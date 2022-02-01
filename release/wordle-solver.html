@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Wordle Solver</title>
+ <script src="K_JSB1.js"></script>
+ <script src="wordle_control.js"></script>
+ 
+ 
+<style type="text/css">
+input[type=text] {
+	font-size: 40px;
+	font-weight: bold;
+	border: 5px solid #003366;
+	border-radius: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	width: 60px;
+	height: 60px;
+	font-family: Arial;
+}
+textarea {
+	font-size: 30px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	color: #000066;
+	background-color: #CCFFFF;
+	width: 500px;
+	height: 510px;
+	border-radius: 10px;
+	border: 5px solid #003366;
+}
+td {
+	text-align: center;
+}
+.yellow {
+	background-color: #FFFF99;
+	color: #800000;
+}
+.green {
+	background-color: #99FF99;
+	color: #336600;
+}
+.gray {
+	background-color: #CCCCCC;
+	color: #3F3F3F;
+}
+select {
+	font-size: 20px;
+}
+.button {
+	font-size: 40px;
+	font-weight: bold;
+	border: 2px solid #003366;
+	border-radius: 10px;
+}
+.info_text {
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<body>
+
+<form>
+	<table    border="0"  align="center">
+		<tr>
+			<td style="width: 405px">
+			<table>
+				<tr>
+					<td>
+					<input class="green" maxlength="1" name="green1" type="text" />
+					</td>
+					<td>
+					<input class="green" maxlength="1" name="green2" type="text" />
+					</td>
+					<td>
+					<input class="green" maxlength="1" name="green3" type="text" />
+					</td>
+					<td>
+					<input class="green" maxlength="1" name="green4" type="text" />
+					</td>
+					<td>
+					<input class="green" maxlength="1" name="green5" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowA1" type="text" /></td>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowA2" type="text" /></td>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowA3" type="text" /></td>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowA4" type="text" /></td>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowA5" type="text" /></td>
+				</tr>
+				<tr>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowB1" type="text" /></td>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowB2" type="text" /></td>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowB3" type="text" /></td>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowB4" type="text" /></td>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowB5" type="text" /></td>
+				</tr>
+				<tr>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowC1" type="text" /></td>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowC2" type="text" /></td>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowC3" type="text" /></td>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowC4" type="text" /></td>
+					<td>
+					<input class="yellow" maxlength="1" name="yellowC5" type="text" /></td>
+				</tr>
+				<tr>
+					<td>
+					<input class="gray" maxlength="1" name="grayA1" type="text" /></td>
+					<td>
+					<input class="gray" maxlength="1" name="grayA2" type="text" /></td>
+					<td>
+					<input class="gray" maxlength="1" name="grayA3" type="text" /></td>
+					<td>
+					<input class="gray" maxlength="1" name="grayA4" type="text" /></td>
+					<td>
+					<input class="gray" maxlength="1" name="grayA5" type="text" /></td>
+				</tr>
+				<tr>
+					<td>
+					<input class="gray" maxlength="1" name="grayB1" type="text" /></td>
+					<td>
+					<input class="gray" maxlength="1" name="grayB2" type="text" /></td>
+					<td>
+					<input class="gray" maxlength="1" name="grayB3" type="text" /></td>
+					<td>
+					<input class="gray" maxlength="1" name="grayB4" type="text" /></td>
+					<td>
+					<input class="gray" maxlength="1" name="grayB5" type="text" /></td>
+				</tr>
+				<tr>
+					<td>
+					<input class="gray" maxlength="1" name="grayC1" type="text" /></td>
+					<td>
+					<input class="gray" maxlength="1" name="grayC2" type="text" /></td>
+					<td>
+					<input class="gray" maxlength="1" name="grayC3" type="text" /></td>
+					<td>
+					<input class="gray" maxlength="1" name="grayC4" type="text" /></td>
+					<td>
+					<input class="gray" maxlength="1" name="grayC5" type="text" /></td>
+				</tr>
+			</table>
+			</td>
+			<td><textarea name="textarea1" rows="99"  spellcheck="false"  ></textarea> </td>
+		</tr>
+		<tr>
+			<td colspan="2"><b class="info_text"><br />
+			Columns </b>&nbsp; <select name="numOfColumns">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option selected="selected" >4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+			<option>10</option>
+			</select> <b class="info_text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			Maximum Matches </b>&nbsp;
+			<select name="maxMatches">
+			<option selected="selected">500</option>
+			<option>800</option>
+			<option>1000</option>
+			<option>1500</option>
+			<option>2000</option>
+			<option>3000</option>
+			<option>4000</option>
+			<option>5000</option>
+			</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="uppercaseCheckbox" type="checkbox" /> <b class="info_text">Upper Case
+			</b><br />
+			<br />
+			<input class="button" name="Button1"   onclick="searchBottonClick(this.form)"   type="button" value="            Search            " />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input class="button" type="reset" value="        Reset       " /><br />
+			<br />
+			</td>
+		</tr>
+	</table>
+</form>
+
+</body>
+
+</html>
