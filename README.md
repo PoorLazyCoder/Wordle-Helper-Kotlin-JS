@@ -4,6 +4,7 @@ Looking for a hint on how to solve today’s Wordle puzzle? Use Wordle Help tool
  
 # How to run
 Open release/wordle-solver.html in any browser, no server or installation needed.
+This is the demo https://koooe.github.io/wordle/
 
 ##
 
